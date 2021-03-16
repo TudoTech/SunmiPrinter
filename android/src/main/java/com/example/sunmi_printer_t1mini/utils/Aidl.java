@@ -134,6 +134,16 @@ public class Aidl{
           e.printStackTrace();
       }
     }
+	
+	public void openDrawer(){
+      try {
+          woyouService.openDrawer(null);
+      } catch (RemoteException e) {
+          e.printStackTrace();
+      }
+    }
+	
+	
 
     public int updatePrinterState(){
       try{

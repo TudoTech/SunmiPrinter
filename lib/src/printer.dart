@@ -14,6 +14,7 @@ class Printer{
   static const String LCD_DOUBLE_STRING = "showDoubleLCD";
   static const String PRINTER_STATUS = "printerStatus";
   static const String PRINT_IMAGE = "printImage";
+  static const String OPEN_DRAW="openDrawer";
 
   static const MethodChannel _channel =
     const MethodChannel('sunmi_printer_t1mini');
@@ -71,6 +72,12 @@ class Printer{
     if (n > 0) {
       await _channel.invokeMethod(EMPTY_LINES, {"n": n});
     }
+  }
+
+  static Future<void> trigerCashDrawOpen() async {
+    
+      await _channel.invokeMethod(OPEN_DRAW);
+    
   }
 
   static Future<void> row({

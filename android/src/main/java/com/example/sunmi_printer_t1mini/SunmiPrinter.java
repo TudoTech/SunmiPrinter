@@ -101,6 +101,10 @@ public class SunmiPrinter{
     Aidl.getInstance().sendLCDDoubleString(upperText,bottomText);
   }
 
+  public void openDrawer(){
+    Aidl.getInstance().openDrawer();
+  }
+
   public void printImage(String base64, int align) {
     byte[] bytes = Base64Utils.decode(base64);
     for (int i = 0; i < bytes.length; ++i) {
